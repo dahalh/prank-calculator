@@ -1,0 +1,136 @@
+body{
+    background: linear-gradient(
+        to bottom,
+        #78E0DC, #F37748);
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.5rem;
+}
+
+.mainParent{
+    width: 350px;
+    background: linear-gradient(rgb(204,51,99), rgb(150,122,161));
+    /* background: #d5573b; */
+    padding: 2rem;
+    border-radius: 10px;
+    border: 10px solid rgba(7, 84, 250, 0.418);
+    box-shadow: -4px 4px 9px rgba(7, 84, 250, 0.26);
+}
+
+.result{
+    font-family: 'Amatic SC', cursive;
+    font-size: 3.0rem;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: -4px 4px 9px rgba(0, 0, 0, 0.25);
+    font-weight: bolder;
+
+    display: flex;
+    justify-content: flex-end;
+    color: rgb(0, 0, 0);
+    background-color: white;
+}
+
+.items{
+    margin-top: 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "clear clear clean plus"
+    "no7 no8 no9 multi"
+    "no4 no5 no6 divide"
+    "no1 no2 no3 minus"
+    "dot no0 ans ans"
+    /* "clear clean divide multi"
+    "no7 no8 no9 plus"
+    "no4 no5 no6 minus"
+    "no1 no2 no3 ans"
+    "dot no0 no0 ans" */
+    
+    ;
+}
+
+.items > button{
+    font-family: 'Amatic SC', cursive;
+    min-height: 60px;
+    border-radius: 15%;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    /* border:none; */
+    box-shadow: -4px 4px 5px rgba(0, 0, 0, 0.25);
+    font-size: 3.3rem;
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+    background: rgba(255,255,255, 0.404);
+}
+
+.items > button:hover{
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.096);
+    color: rgb(0, 0, 0);
+}
+
+.clear {
+    grid-area: clear;}
+.clean {
+    grid-area: clean;}
+.divide {
+    grid-area: divide;}
+.multi {
+    grid-area: multi;}
+.plus {
+    grid-area: plus;}
+.minus {
+    grid-area: minus;}
+.no-7 {
+    grid-area: no7;}
+.no-8 {
+    grid-area: no8;}
+.no-9 {
+    grid-area: no9;}
+.no-6 {
+    grid-area: no6;}
+.no-5 {
+    grid-area: no5;}
+.no-4 {
+    grid-area: no4;}
+.no-3 {
+    grid-area: no3;}
+.no-2 {
+    grid-area: no2;}
+.no-1 {
+    grid-area: no1;}
+.no-0 {
+    grid-area: no0;}
+.dot {
+    grid-area: dot;}
+.ans {
+    grid-area: ans;}
+
+
+    .prank{
+        animation: shake 0.3s ease-in;
+    }
+
+    @keyframes shake {
+        0%{
+            transform: translateX(10px);
+        }
+
+        50%{
+            transform: translateX(-10px);
+        }
+
+        75%{
+            transform: translateX(10px);
+        }
+
+        100%{
+            transform: translateX(-10px);
+        }
+    }
